@@ -224,11 +224,13 @@ a {
 }
 
 .button-red {
+  font-family: "Cuprum", "Arial", sans-serif;
+  background-color: #ee3643;
+  
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
-  
-  background-color: #ee3643;
 }
 
 .button-red:hover,
@@ -421,6 +423,103 @@ a {
   color: #ffffff;
   background-color: #ee3643;
   border: none;
+}
+
+.feature-item {
+  width: 300px;
+  height: 123px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.feature-item p:first-of-type {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.feature-item p:last-of-type {
+  width: 135px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  background-color: #000000;
+  opacity: 0.1;
+
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.slider-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.slider-text {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.index-title-block {
+  background-color: #f9f5f0;
+}
+
+.index-title-block h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.manufacturer-list {
+  list-style: none;
+  font-size: 0;
+}
+
+.manufacturer-item {
+  border: 1px solid #eaeaea;
+  width: 220px;
+  height: 145px;
+}
+
+.index-services h2 { 
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.index-services-list {
+  list-style: none;
+}
+
+.index-services-item h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+
+.index-services-item:nth-child(n+2) {
+  display: none;
+}
+
+.catalog-text h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 /* footer & modal */

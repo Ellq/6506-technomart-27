@@ -12,29 +12,6 @@ var modalFormEmail = modalForm.querySelector("[name=email]");
 var serviceBtns = document.querySelectorAll(".index-services-buttons button");
 var serviceItems = document.querySelectorAll(".index-services-item");
 
-// if (document.querySelector(".features")) {
-//   var prevArrow = document.querySelector(".slider-arrow.slider-prev");
-//   var nextArrow = document.querySelector(".slider-arrow.slider-next");
-//   var slides = document.querySelectorAll(".slider-item")
-//   var firstSlide = document.querySelector(".slider-item:first-child");
-//   var lastSlide = document.querySelector(".slider-item:last-child");
-//   var activeSlide = document.querySelector(".slider-item.active");
-
-//   prevArrow.addEventListener("click", function (evt) {
-//     evt.preventDefault();
-    
-//     if (activeSlide.previousElementSibling && activeSlide.previousElementSibling.classList.contains("active")) {
-//       activeSlide.remove("active");
-//       lastSlide.classList.add("active");
-//     } else {
-//       activeSlide.previousElementSibling.classList.add("active");
-//       activeSlide.classList.remove("active");      
-//     }
-
-//   })
-
-// }
-
 serviceBtns.forEach(btn => {
   btn.addEventListener("click", function (evt) {
     evt.preventDefault();

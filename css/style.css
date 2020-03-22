@@ -1032,11 +1032,6 @@ a {
   border: 1px solid #e5e5e5;
 }
 
-/* .filter-list input[type="checkbox"],
-.filter-list input[type="radio"] {
-  display: none;
-} */
-
 .filter fieldset:last-of-type {
   border-bottom: none;
 }

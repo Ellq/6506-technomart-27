@@ -39,7 +39,7 @@ if (buyButton) {
   buyButton.forEach(btn => {
     btn.addEventListener("click", function (evt) {
       evt.preventDefault();
-      modalCart.classList.add('modal-show');
+      modalCart.classList.add("modal-show");
     })
   });  
 };

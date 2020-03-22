@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
 
 html {
   box-sizing: border-box;
@@ -37,13 +37,13 @@ a {
 }
 
 .visually-hidden {
-	position: absolute !important;
+	position: absolute;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1px; 
 	overflow: hidden;
 }
 
@@ -517,6 +517,7 @@ a {
   position: relative;
   
   display: inline-block;
+  vertical-align: top;
   margin-left: 17px;
   margin-right: 17px;
   margin-top: 8px;
@@ -573,10 +574,15 @@ a {
 }
 
 .main-nav-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 21px;
+
+  list-style: none;
+
+  background-color: #32425c;
+  box-shadow: inset 0px -5px 0 0 #293449;
 }
 
 .main-nav-item {
@@ -585,8 +591,7 @@ a {
 
 .main-nav-item a {
   display: block;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding: 22px 10px;
   
   font-size: 17px;
   line-height: 17px;
@@ -646,7 +651,16 @@ a {
 .index-about p {
   margin: 0;
   padding: 0;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
+}
+
+.index-about p:last-of-type {
+  width: 390px;
+}
+
+.index-contacts p {
+  width: 180px;
+  margin-bottom: 31px;
 }
 
 .map-button img {
@@ -787,6 +801,7 @@ a {
 
 .page-title {
   padding: 32px 30px;
+  margin-bottom: 17px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
@@ -872,6 +887,8 @@ a {
   height: 20px;
   margin-left: -10px;
 
+  font-size: 0;
+  
   border-radius: 50%;
   background-color: #ffffff;
   cursor: pointer;
@@ -923,7 +940,7 @@ a {
 }
 
 .filter legend {
-  margin-bottom: 17px;
+  margin-bottom: 13px;
   
   font-size: 17px;
   line-height: 30px;
@@ -948,10 +965,14 @@ a {
   
   display: block;
   padding-left: 35px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   
   font-size: 15px;
   line-height: 20px;
+}
+
+.filter-item:last-of-type label {
+  margin-bottom: 0;
 }
 
 .filter-item input[type="checkbox"] + label::before {
@@ -1011,10 +1032,10 @@ a {
   border: 1px solid #e5e5e5;
 }
 
-.filter-list input[type="checkbox"],
+/* .filter-list input[type="checkbox"],
 .filter-list input[type="radio"] {
   display: none;
-}
+} */
 
 .filter fieldset:last-of-type {
   border-bottom: none;
@@ -1023,6 +1044,7 @@ a {
 .filter .button-submit {
   width: 140px;
   height: 38px;
+  margin-top: 49px;
 
   border: 1px solid #e5e5e5;
   border-radius: 3px;
@@ -1037,10 +1059,18 @@ a {
   border-color: #ee3643;
 }
 
+.filter input:focus + label {
+  outline-color: rgb(77, 144, 254); // #4D90FE
+  outline-offset: -2px;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
 .catalog-sort {
   display: flex;
   align-items: center;
   padding-left: 19px;
+  height: 38px;
   min-height: 38px;
   
   font-size: 13px;
@@ -1056,6 +1086,7 @@ a {
 
 .catalog-sort > div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 460px;
@@ -1089,6 +1120,10 @@ a {
   border-bottom: none;
 }
 
+.sort-item-icon {
+  font-size: 0;
+}
+
 .sort-item-icon.active svg,
 .sort-item-icon.active path {
   fill: #ee3643;
@@ -1115,7 +1150,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 220px;
-  height: 318px;
+  min-height: 318px;
   border: 1px solid #e5e5e5;
   padding-bottom: 21px;
   margin-bottom: 20px;
@@ -1181,6 +1216,7 @@ a {
 .product-item h3 {
   margin: 0 auto;
   width: 160px;
+  min-height: 40px;
   order: 1;
   
   font-size: 18px;
@@ -1397,6 +1433,7 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 3px;
+  overflow: hidden;
 
   background-color: rgba(0, 0, 0, 0.1);
 
@@ -1451,6 +1488,7 @@ a {
   padding-top: 25px;
   background-repeat: no-repeat;
   background-position: 0 0;
+  background-color: #786652;
 }
 
 .slider-item.active {
@@ -1467,6 +1505,8 @@ a {
 
 .slider-arrow {
   position: absolute;
+  margin: 0;
+  padding: 0;
   top: 50%;
   margin-top: -20px;
   width: 22px;
@@ -1474,8 +1514,10 @@ a {
 
   font-size: 0;
 
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
+  border: none;
 }
 
 .slider-controls {
@@ -1622,12 +1664,6 @@ a {
   min-height: 520px;
 }
 
-.index-services p {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
-}
-
 .index-services .container {
   padding-top: 65px;
 }
@@ -1635,13 +1671,18 @@ a {
 .index-services h2 { 
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
+}
+
+.index-services-desc {
+  width: 400px;
+  padding: 0;
 }
 
 .index-services-list {
@@ -1671,7 +1712,7 @@ a {
 
 .index-services-wrapper {
   display: flex;
-  padding-top: 60px;
+  padding-top: 54px;
 }
 
 .index-services-buttons {
@@ -1744,7 +1785,7 @@ a {
 .index-services-item h3 {
   margin: 0;
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
   
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
@@ -1761,7 +1802,6 @@ a {
 .index-services-item p {
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
   width: 375px;
 }
 
@@ -1927,6 +1967,7 @@ a {
 
 .footer-feedback a,
 .footer-developer a {
+  display: block;
   color: #ffd180;
 }
 
@@ -1948,6 +1989,9 @@ a {
   width: 42px;
   height: 42px;
   margin-right: 3px;
+
+  font-size: 0;
+  
   border-radius: 50%;
   background-color: #212a3a;
 }
@@ -2139,6 +2183,11 @@ a {
   
   border: 2px solid #dee3e4;
   border-radius: 3px;
+}
+
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
+  outline-color: #ee3643;
 }
 
 .modal-feedback textarea {

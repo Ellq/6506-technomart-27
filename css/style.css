@@ -1094,6 +1094,7 @@ a {
   padding: 0;
 
   text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
 
   border: none;
   background-color: transparent;
@@ -1126,6 +1127,10 @@ a {
 
 .sort-item-icon:first-child {
   margin-right: 19px;
+}
+
+.sort-direction-icons {
+  padding-top: 6px;
 }
 
 .product-list {
